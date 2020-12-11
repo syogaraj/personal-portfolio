@@ -1,57 +1,50 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+	<v-app>
+		<v-app-bar app dark>
+			<div class="d-flex align-center">
+				<h2>Yogaraj Sivaprakasam</h2>
+			</div>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+			<v-spacer></v-spacer>
+			<div id="nav_links">
+        <router-link to="/home">
+					<v-btn depressed>Home</v-btn>
+				</router-link>
+				<router-link to="/about">
+					<v-btn depressed>About me</v-btn>
+				</router-link>
+				<router-link to="/portfolio">
+					<v-btn depressed>Portfolio</v-btn>
+				</router-link>
+			</div>
+		</v-app-bar>
 
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-    </v-main>
-  </v-app>
+		<v-main>
+			<v-container>
+				<router-view></router-view>
+			</v-container>
+		</v-main>
+	</v-app>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+	name: "App",
 
-  components: {
-  },
+	components: {},
 
-  data: () => ({
-    //
-  }),
+	data: () => ({
+		//
+	}),
 };
 </script>
+
+<style scoped lang="scss">
+#nav_links > a {
+	text-decoration: none;
+}
+.router-link-active > button {
+	background: white !important;
+	color: black;
+}
+</style>
