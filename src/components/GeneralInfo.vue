@@ -2,7 +2,7 @@
 	<v-container>
 		<div id="my_avatar">
 			<v-avatar size="158">
-				<img src="../assets/images/self/me.svg" alt="Yogaraj.S" />
+				<img src="../assets/images/self/me.png" alt="Yogaraj.S" />
 			</v-avatar>
 		</div>
 		<div id="my_name">
