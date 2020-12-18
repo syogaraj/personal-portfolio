@@ -174,7 +174,7 @@ hr {
 
 	button {
 		color: white;
-		background-color: #e51256;
+		background-color: #000000;
 	}
 }
 </style>
