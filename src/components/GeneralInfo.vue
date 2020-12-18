@@ -14,6 +14,16 @@
 			<img src="../assets/images/social_media/location-pin.svg" alt="Location" />
 			<h5>Puducherry, India</h5>
 		</div>
+		<div id="my_social_media">
+			<div v-for="item in social_links" :key="item.id">
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on, attrs }">
+						<v-img :src="item.src" @click="openLink(item)" width="60" height="60" v-on="on" v-bind="attrs"/>
+					</template>
+					<span>{{ item.tooltip }}</span>
+				</v-tooltip>
+			</div>
+		</div>
 	</v-container>
 </template>
 
@@ -24,42 +34,51 @@ export default {
 			social_links: [
 				{
 					id: 1,
-					src: "../assets/images/social_media/stack-overflow.svg",
+					src: require("../assets/images/social_media/stack-overflow.svg"),
 					link: "https://stackoverflow.com/users/3607028/yogaraj",
 					tooltip: "StackOverflow",
 				},
 				{
 					id: 2,
-					src: "../assets/images/social_media/email.svg",
-					email: "yogarajsivaprakasam@gmail.com",
-					tootlip: "Email",
+					src: require("../assets/images/social_media/email.svg"),
+					link: "mailto:yogarajsivaprakasam@gmail.com",
+					tooltip: "Email",
 				},
 				{
 					id: 3,
-					src: "../assets/images/social_media/linkedin.svg",
-					link: "https://www.linkedin.com/in/yogarajs",
-					tootlip: "LinkedIn",
+					src: require("../assets/images/social_media/linkedin.svg"),
+					link: "https://www.linkedin.com/in/syogaraj",
+					tooltip: "LinkedIn",
 				},
 				{
 					id: 4,
-					src: "../assets/images/social_media/github.svg",
+					src: require("../assets/images/social_media/github.svg"),
 					link: "https://www.github.com/syogaraj",
 					tooltip: "Github",
 				},
 				{
 					id: 5,
-					src: "../assets/images/social_media/twitter.svg",
+					src: require("../assets/images/social_media/twitter.svg"),
 					link: "https://www.twitter.com/_yogarajs",
 					tooltip: "Twitter",
 				},
 				{
 					id: 6,
-					src: "../assets/images/social_media/instagram.svg",
+					src: require("../assets/images/social_media/instagram.svg"),
 					link: "https://www.instagram.com/_yogarajs",
 					tooltip: "Instagram",
 				},
 			],
 		};
+	},
+	methods: {
+		openLink(item) {
+			// if (item.link) {
+				window.open(item.link, "_blank");
+			// } else if (item.email) {
+			// 	windoitem.email;
+			// }
+		},
 	},
 };
 </script>
@@ -90,7 +109,7 @@ hr {
 	width: 33%;
 	margin: 0 auto;
 	border-top: solid 4px;
-  padding-bottom: 0.5em;
+	padding-bottom: 0.5em;
 }
 
 #my_designation {
@@ -114,6 +133,7 @@ hr {
 	margin-top: 10px;
 	display: flex;
 	justify-content: center;
+	padding-top: 5px;
 
 	img {
 		width: 25px;
@@ -130,5 +150,13 @@ hr {
 		align-items: center;
 		letter-spacing: 0.06em;
 	}
+}
+
+#my_social_media {
+	width: 45%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding-top: 5em;
 }
 </style>
