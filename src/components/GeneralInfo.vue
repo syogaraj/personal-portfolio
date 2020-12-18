@@ -1,9 +1,7 @@
 <template>
 	<v-container>
 		<div id="my_avatar">
-			<v-avatar size="158">
-				<img src="../assets/images/self/me.png" alt="Yogaraj.S" />
-			</v-avatar>
+			<img src="../assets/images/self/me.png" alt="Yogaraj.S" />
 		</div>
 		<div id="my_name">
 			<h1>Yogaraj Sivaprakasam</h1>
@@ -21,7 +19,40 @@
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			social_links: [
+				{
+					id: 1,
+					src: "../assets/images/social_media/stack-overflow.svg",
+					link: "",
+				},
+				{
+					id: 2,
+					src: "../assets/images/social_media/email.svg",
+					link: "",
+				},
+				{
+					id: 3,
+					src: "../assets/images/social_media/linkedin.svg",
+					link: "",
+				},
+				{
+					id: 4,
+					src: "../assets/images/social_media/github.svg",
+					link: "",
+				},
+				{
+					id: 5,
+					src: "../assets/images/social_media/twitter.svg",
+					link: "",
+				},
+				{
+					id: 6,
+					src: "../assets/images/social_media/instagram.svg",
+					link: "",
+				},
+			],
+		};
 	},
 };
 </script>
@@ -30,17 +61,6 @@ export default {
 #my_avatar {
 	padding: 1em;
 	text-align: center;
-
-	.v-avatar {
-		box-shadow: 0px 4px 9px 2px rgba(109, 119, 120, 0.84);
-		border-radius: 100px;
-
-		img {
-			width: 12em;
-			margin-top: 8px;
-			height: 11em;
-		}
-	}
 }
 
 #my_name {
@@ -78,6 +98,8 @@ export default {
 	text-align: center;
 	line-height: 21px;
 	margin-top: 10px;
+	display: flex;
+	justify-content: center;
 
 	img {
 		width: 25px;
