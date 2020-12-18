@@ -73,11 +73,7 @@ export default {
 	},
 	methods: {
 		openLink(item) {
-			// if (item.link) {
 				window.open(item.link, "_blank");
-			// } else if (item.email) {
-			// 	windoitem.email;
-			// }
 		},
 	},
 };
