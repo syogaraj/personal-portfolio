@@ -11,7 +11,10 @@
 		<div id="my_designation">
 			<h3>Full Stack/Python Developer</h3>
 		</div>
-		<!-- <div id="my_location"></div> -->
+		<div id="my_location">
+			<img src="../assets/images/social_media/location-pin.svg" alt="Location" />
+			<h5>Puducherry, India</h5>
+		</div>
 	</v-container>
 </template>
 
@@ -33,7 +36,7 @@ export default {
 		border-radius: 100px;
 
 		img {
-			width: 11em;
+			width: 12em;
 			margin-top: 8px;
 			height: 11em;
 		}
@@ -68,6 +71,28 @@ export default {
 
 	h3 {
 		margin: 0 auto;
+	}
+}
+
+#my_location {
+	text-align: center;
+	line-height: 21px;
+	margin-top: 10px;
+
+	img {
+		width: 25px;
+		height: 25px;
+	}
+
+	h4 {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 16px;
+		display: flex;
+		align-items: center;
+		letter-spacing: 0.06em;
 	}
 }
 </style>
