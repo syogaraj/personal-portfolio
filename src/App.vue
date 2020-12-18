@@ -7,11 +7,11 @@
 
 			<v-spacer></v-spacer>
 			<div id="nav_links">
-        <router-link to="/home">
+				<router-link to="/home">
 					<v-btn depressed>Home</v-btn>
 				</router-link>
-				<router-link to="/about">
-					<v-btn depressed>About me</v-btn>
+				<router-link to="/projects">
+					<v-btn depressed>Projects</v-btn>
 				</router-link>
 				<router-link to="/portfolio">
 					<v-btn depressed>Portfolio</v-btn>
@@ -46,5 +46,19 @@ export default {
 .router-link-active > button {
 	background: white !important;
 	color: black;
+}
+
+#app {
+
+	background: linear-gradient(
+			180deg,
+			#cff0fb 19.27%,
+			rgba(245, 252, 254, 0.208696) 75.52%,
+			rgba(255, 255, 255, 0) 94.79%
+		),
+		#eaf7ff;
+	mix-blend-mode: normal;
+	border: 1px solid #e7d3d3;
+	box-sizing: border-box;
 }
 </style>

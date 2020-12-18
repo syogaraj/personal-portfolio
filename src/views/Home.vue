@@ -1,15 +1,15 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <GeneralInfo/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import GeneralInfo from "@/components/GeneralInfo.vue";
 
 export default {
   name: 'Home',
-  components: {
-  }
+  components: {GeneralInfo}
 }
 </script>
