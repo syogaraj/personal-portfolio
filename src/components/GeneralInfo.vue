@@ -84,7 +84,7 @@ export default {
 		height: 25px;
 	}
 
-	h4 {
+	h5 {
 		font-family: Roboto;
 		font-style: normal;
 		font-weight: bold;
