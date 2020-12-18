@@ -1,29 +1,41 @@
 <template>
 	<v-container>
-		<div id="my_avatar">
-			<img src="../assets/images/self/me.png" alt="Yogaraj.S" />
-		</div>
-		<div id="my_name">
-			<h1>Yogaraj Sivaprakasam</h1>
-		</div>
-		<v-divider light></v-divider>
-		<div id="my_designation">
-			<h3>Full Stack/Python Developer @Zoho</h3>
-		</div>
-		<div id="my_location">
-			<img src="../assets/images/social_media/location-pin.svg" alt="Location" />
-			<h5>Puducherry, India</h5>
-		</div>
-		<div id="my_social_media">
-			<div v-for="item in social_links" :key="item.id">
-				<v-tooltip bottom>
-					<template v-slot:activator="{ on, attrs }">
-						<v-img :src="item.src" @click="openLink(item)" width="60" height="60" v-on="on" v-bind="attrs"/>
-					</template>
-					<span>{{ item.tooltip }}</span>
-				</v-tooltip>
+		<section>
+			<div id="my_avatar">
+				<img src="../assets/images/self/me.png" alt="Yogaraj.S" />
 			</div>
-		</div>
+			<div id="my_name">
+				<h1>Yogaraj Sivaprakasam</h1>
+			</div>
+			<v-divider light></v-divider>
+			<div id="my_designation">
+				<h3>Full Stack/Python Developer @Zoho</h3>
+			</div>
+			<div id="my_location">
+				<img src="../assets/images/social_media/location-pin.svg" alt="Location" />
+				<h5>Puducherry, India</h5>
+			</div>
+			<div id="my_social_media">
+				<div v-for="item in social_links" :key="item.id">
+					<v-tooltip bottom>
+						<template v-slot:activator="{ on, attrs }">
+							<v-img
+								:src="item.src"
+								@click="openLink(item)"
+								width="60"
+								height="60"
+								v-on="on"
+								v-bind="attrs"
+							/>
+						</template>
+						<span>{{ item.tooltip }}</span>
+					</v-tooltip>
+				</div>
+			</div>
+			<div id="get_started">
+				<v-btn depressed rounded large>Let's get started!</v-btn>
+			</div>
+		</section>
 	</v-container>
 </template>
 
@@ -73,7 +85,7 @@ export default {
 	},
 	methods: {
 		openLink(item) {
-				window.open(item.link, "_blank");
+			window.open(item.link, "_blank");
 		},
 	},
 };
@@ -154,5 +166,15 @@ hr {
 	justify-content: space-between;
 	margin: 0 auto;
 	padding-top: 5em;
+}
+
+#get_started {
+	text-align: center;
+	padding-top: 9em;
+
+	button {
+		color: white;
+		background-color: #e51256;
+	}
 }
 </style>
