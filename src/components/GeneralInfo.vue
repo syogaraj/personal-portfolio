@@ -6,8 +6,9 @@
 		<div id="my_name">
 			<h1>Yogaraj Sivaprakasam</h1>
 		</div>
+		<v-divider light></v-divider>
 		<div id="my_designation">
-			<h3>Full Stack/Python Developer</h3>
+			<h3>Full Stack/Python Developer @Zoho</h3>
 		</div>
 		<div id="my_location">
 			<img src="../assets/images/social_media/location-pin.svg" alt="Location" />
@@ -24,32 +25,38 @@ export default {
 				{
 					id: 1,
 					src: "../assets/images/social_media/stack-overflow.svg",
-					link: "",
+					link: "https://stackoverflow.com/users/3607028/yogaraj",
+					tooltip: "StackOverflow",
 				},
 				{
 					id: 2,
 					src: "../assets/images/social_media/email.svg",
-					link: "",
+					email: "yogarajsivaprakasam@gmail.com",
+					tootlip: "Email",
 				},
 				{
 					id: 3,
 					src: "../assets/images/social_media/linkedin.svg",
-					link: "",
+					link: "https://www.linkedin.com/in/yogarajs",
+					tootlip: "LinkedIn",
 				},
 				{
 					id: 4,
 					src: "../assets/images/social_media/github.svg",
-					link: "",
+					link: "https://www.github.com/syogaraj",
+					tooltip: "Github",
 				},
 				{
 					id: 5,
 					src: "../assets/images/social_media/twitter.svg",
-					link: "",
+					link: "https://www.twitter.com/_yogarajs",
+					tooltip: "Twitter",
 				},
 				{
 					id: 6,
 					src: "../assets/images/social_media/instagram.svg",
-					link: "",
+					link: "https://www.instagram.com/_yogarajs",
+					tooltip: "Instagram",
 				},
 			],
 		};
@@ -77,6 +84,13 @@ export default {
 	h1 {
 		margin: 0 auto;
 	}
+}
+
+hr {
+	width: 33%;
+	margin: 0 auto;
+	border-top: solid 4px;
+  padding-bottom: 0.5em;
 }
 
 #my_designation {
