@@ -100,6 +100,7 @@ export default {
 #my_name {
 	font-family: Roboto;
 	font-style: normal;
+	font-size: 1.75em;
 	font-weight: bold;
 	display: flex;
 	align-items: center;
