@@ -1,12 +1,12 @@
 <template>
 	<v-app>
-		<v-app-bar app dark>
+		<v-app-bar app dark class="tw-hidden md:tw-block">
 			<div class="d-flex align-center">
-				<h2>Yogaraj Sivaprakasam</h2>
+				<h2 class="md:tw-flex ">Yogaraj Sivaprakasam</h2>
 			</div>
 
 			<v-spacer></v-spacer>
-			<div id="nav_links">
+			<div id="nav_links" class="tw-hidden md:tw-flex">
 				<router-link to="/home">
 					<v-btn depressed>Home</v-btn>
 				</router-link>
@@ -20,9 +20,7 @@
 		</v-app-bar>
 
 		<v-main>
-			<v-container>
-				<router-view></router-view>
-			</v-container>
+			<router-view class="tw-bg-gradient-to-tr tw-from-pink-300 tw-to-green-200 tw-via-yellow-200"></router-view>
 		</v-main>
 	</v-app>
 </template>
@@ -40,8 +38,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@font-face {
+  font-family: "Varela";
+  src: local("Varela"),
+    url(./fonts/varela/Varela-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito"),
+    url(./fonts/nunito/Nunito-Regular.ttf) format("truetype");
+}
+
+
 #nav_links > a {
 	text-decoration: none;
+	@apply  tw-hidden md:tw-block;
 }
 .router-link-active > button {
 	background: white !important;
@@ -60,5 +71,9 @@ export default {
 	mix-blend-mode: normal;
 	border: 1px solid #e7d3d3;
 	box-sizing: border-box;
+}
+
+.v-main {
+	@apply tw-p-0 #{!important} md:tw-pt-16 #{!important};
 }
 </style>
