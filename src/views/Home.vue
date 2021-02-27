@@ -3,20 +3,20 @@
 		<section class="home">
 			<GeneralInfo @get-started="getStarted()" />
 		</section>
-		<!-- <section class="about" ref="about">
+		<section class="about" ref="about">
 			<AboutMe />
-		</section> -->
+		</section>
 	</div>
 </template>
 
 <script>
 // @ is an alias to /src
 import GeneralInfo from "@/components/GeneralInfo.vue";
-// import AboutMe from "@/components/AboutMe.vue";
+import AboutMe from "@/components/AboutMe.vue";
 
 export default {
 	name: "Home",
-	components: { GeneralInfo },
+	components: { GeneralInfo, AboutMe },
 	methods: {
 		getStarted() {
 			console.log("getting started");
@@ -36,6 +36,6 @@ export default {
 }
 
 .about {
-	height: 90vh !important;
+	min-height: 90vh !important;
 }
 </style>

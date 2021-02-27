@@ -6,7 +6,7 @@
 			</div>
 
 			<v-spacer></v-spacer>
-			<div id="nav_links" class="tw-hidden md:tw-flex">
+			<div id="nav_links" class="tw-hidden">
 				<router-link to="/home">
 					<v-btn depressed>Home</v-btn>
 				</router-link>
