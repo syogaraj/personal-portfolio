@@ -2,7 +2,11 @@
 	<v-container>
 		<section>
 			<div id="my_avatar">
-				<img src="../assets/images/self/me.png" class="tw-border-8 tw-rounded-full tw-shadow-2xl" alt="Yogaraj.S" />
+				<img
+					src="../assets/images/self/me.png"
+					class="tw-border-8 tw-rounded-full tw-shadow-2xl"
+					alt="Yogaraj.S"
+				/>
 			</div>
 			<div id="my_name">
 				<h1>Yogaraj Sivaprakasam</h1>
@@ -12,11 +16,41 @@
 				<h3>Full Stack/Python Developer</h3>
 			</div>
 			<div id="my_location">
-				<img src="../assets/images/social_media/location-pin.svg" alt="Location" />
+				<img
+					src="../assets/images/social_media/location-pin.svg"
+					alt="Location"
+				/>
 				<h5>Puducherry, India</h5>
 			</div>
-			<div id="my_social_media" class="tw-hidden md:tw-flex md:tw-justify-between md:tw-w-9/12 lg:tw-w-6/12">
-				<div v-for="item in social_links" :key="item.id" @click="openLink(item)">
+			<div
+				id="my_social_media"
+				class="tw-hidden md:tw-flex md:tw-justify-between md:tw-w-9/12 lg:tw-w-6/12"
+			>
+				<div
+					v-for="item in social_links"
+					:key="item.id"
+					@click="openLink(item)"
+				>
+					<v-tooltip bottom>
+						<template v-slot:activator="{ on, attrs }">
+							<v-img
+								:src="item.src"
+								width="60"
+								height="60"
+								v-on="on"
+								v-bind="attrs"
+							/>
+						</template>
+						<span>{{ item.tooltip }}</span>
+					</v-tooltip>
+				</div>
+			</div>
+			<div class="tw-flex tw-justify-between tw-w-9/12 md:tw-hidden" id="mob_social_media">
+				<div
+					v-for="item in mobSocialLinks"
+					:key="item.id"
+					@click="openLink(item)"
+				>
 					<v-tooltip bottom>
 						<template v-slot:activator="{ on, attrs }">
 							<v-img
@@ -32,7 +66,9 @@
 				</div>
 			</div>
 			<div id="get_started">
-				<v-btn depressed rounded large @click="$emit('get-started')">Let's get started!</v-btn>
+				<v-btn depressed rounded large @click="$emit('get-started')"
+					>Let's get started!</v-btn
+				>
 			</div>
 		</section>
 	</v-container>
@@ -42,6 +78,26 @@
 export default {
 	data() {
 		return {
+			mobSocialLinks: [
+				{
+					id: 2,
+					src: require("../assets/images/social_media/email.svg"),
+					link: "mailto:yogarajsivaprakasam@gmail.com",
+					tooltip: "Email",
+				},
+				{
+					id: 3,
+					src: require("../assets/images/social_media/linkedin.svg"),
+					link: "https://www.linkedin.com/in/syogaraj",
+					tooltip: "LinkedIn",
+				},
+				{
+					id: 4,
+					src: require("../assets/images/social_media/github.svg"),
+					link: "https://www.github.com/syogaraj",
+					tooltip: "Github",
+				},
+			],
 			social_links: [
 				{
 					id: 1,
@@ -156,11 +212,9 @@ hr {
 	}
 }
 
-#my_social_media {
+#my_social_media, #mob_social_media {
 	margin: 0 auto;
 	padding-top: 5em;
-
-
 
 	.v-image {
 		border-radius: 50%;
