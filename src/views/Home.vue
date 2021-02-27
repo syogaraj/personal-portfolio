@@ -37,5 +37,6 @@ export default {
 
 .about {
 	min-height: 90vh !important;
+	@apply tw-mt-20;
 }
 </style>
