@@ -72,6 +72,10 @@ export default {
 					name: "Python-Flask",
 					imgSrc: require("../assets/images/programming_languages/python_flask.png"),
 				},
+				{
+					name: "Git",
+					imgSrc: require("../assets/images/programming_languages/git.png"),
+				},
 			],
 		};
 	},
