@@ -41,7 +41,7 @@ export default {
 			companies: [
 				{
 					name: "Zoho Corporation Pvt. Ltd  (2017 - Present)",
-					icon: require("../assets/images/programming_languages/zoho.png"),
+					icon: require("../assets/images/company/zoho.png"),
 					workExp: [
 						"Responsible for Python application which collects data from machines which drives the cloud environment of Zoho.",
 						"Rewritten the python application to establish a solid data-driven logic with maintainability.",

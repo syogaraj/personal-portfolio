@@ -26,55 +26,55 @@ export default {
 			techStack: [
 				{
 					name: "Python",
-					imgSrc: require("../assets/images/programming_languages/python.png"),
+					imgSrc: require("../assets/images/techstack/python.png"),
 				},
 				{
 					name: "Java",
-					imgSrc: require("../assets/images/programming_languages/java.png"),
+					imgSrc: require("../assets/images/techstack/java.png"),
 				},
 				{
 					name: "Linux",
-					imgSrc: require("../assets/images/programming_languages/linux.png"),
+					imgSrc: require("../assets/images/techstack/linux.png"),
 				},
 				{
 					name: "Vue.js",
-					imgSrc: require("../assets/images/programming_languages/vue.png"),
+					imgSrc: require("../assets/images/techstack/vue.png"),
 				},
 				{
 					name: "Vuetify",
-					imgSrc: require("../assets/images/programming_languages/vuetify.png"),
+					imgSrc: require("../assets/images/techstack/vuetify.png"),
 				},
 				{
 					name: "JavaScript",
-					imgSrc: require("../assets/images/programming_languages/javascript.png"),
+					imgSrc: require("../assets/images/techstack/javascript.png"),
 				},
 				{
 					name: "HTML",
-					imgSrc: require("../assets/images/programming_languages/html.png"),
+					imgSrc: require("../assets/images/techstack/html.png"),
 				},
 				{
 					name: "CSS",
-					imgSrc: require("../assets/images/programming_languages/css.png"),
+					imgSrc: require("../assets/images/techstack/css.png"),
 				},
 				{
 					name: "MySQL",
-					imgSrc: require("../assets/images/programming_languages/mysql.png"),
+					imgSrc: require("../assets/images/techstack/mysql.png"),
 				},
 				{
 					name: "NodeJS",
-					imgSrc: require("../assets/images/programming_languages/nodejs.png"),
+					imgSrc: require("../assets/images/techstack/nodejs.png"),
 				},
 				{
 					name: "Tailwind CSS",
-					imgSrc: require("../assets/images/programming_languages/tailwind.png"),
+					imgSrc: require("../assets/images/techstack/tailwind.png"),
 				},
 				{
 					name: "Python-Flask",
-					imgSrc: require("../assets/images/programming_languages/python_flask.png"),
+					imgSrc: require("../assets/images/techstack/python_flask.png"),
 				},
 				{
 					name: "Git",
-					imgSrc: require("../assets/images/programming_languages/git.png"),
+					imgSrc: require("../assets/images/techstack/git.png"),
 				},
 			],
 		};
