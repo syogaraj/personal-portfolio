@@ -22,7 +22,7 @@ export default {
 			console.log("getting started");
 			this.$refs["about"].scrollIntoView({
 				behavior: "smooth",
-				block: "end",
+				block: "start",
 				inline: "nearest",
 			});
 		},
@@ -37,6 +37,5 @@ export default {
 
 .about {
 	min-height: 90vh !important;
-	@apply tw-mt-20;
 }
 </style>
