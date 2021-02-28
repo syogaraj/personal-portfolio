@@ -14,6 +14,11 @@
 				Strong engineering professional with a Bachelor's degree in the
 				stream of Information Technology.
 			</v-card-text>
+			<v-card-actions  class="tw-justify-center">
+				<v-btn outlined color="indigo" @click="downloadResume()"
+					>Download Resume</v-btn
+				>
+			</v-card-actions>
 		</v-card>
 		<div id="comprehensiveStack">
 			<div id="techStack" class="comprehensiveDiv">
@@ -35,6 +40,11 @@ import EducationTimeline from "./EducationTimeline.vue";
 import WorkExperience from "./WorkExperience.vue";
 export default {
 	components: { TechStack, EducationTimeline, WorkExperience },
+	methods: {
+		downloadResume() {
+			window.open(require('../assets/pdf/Yogaraj_Resume.pdf'), '_blank');
+		}
+	}
 };
 </script>
 
