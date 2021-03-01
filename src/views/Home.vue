@@ -20,7 +20,6 @@ export default {
 	components: { GeneralInfo, AboutMe },
 	methods: {
 		getStarted() {
-			console.log("getting started");
 			this.$refs["about"].scrollIntoView({
 				behavior: "smooth",
 				block: "start",
