@@ -82,13 +82,5 @@ export default {
 	.comprehensiveDiv {
 		@apply tw-w-11/12 tw-mx-auto tw-my-4 md:tw-w-8/12 xl:tw-mx-3;
 	}
-
-	#techStack {
-		@apply xl:tw-mt-16;
-	}
-
-	#education {
-		@apply xl:tw-mt-10;
-	}
 }
 </style>

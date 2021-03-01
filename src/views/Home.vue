@@ -3,7 +3,8 @@
 		<section class="home">
 			<GeneralInfo @get-started="getStarted()" />
 		</section>
-		<section class="about" ref="about">
+		<div ref="about" class="tw-p-5"></div>
+		<section class="about">
 			<AboutMe />
 		</section>
 	</div>
