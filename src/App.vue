@@ -2,7 +2,7 @@
 	<v-app>
 		<v-app-bar app dark class="tw-hidden md:tw-block">
 			<div class="d-flex align-center">
-				<h2 class="md:tw-flex ">Yogaraj Sivaprakasam</h2>
+				<h2 class="md:tw-flex">Yogaraj Sivaprakasam</h2>
 			</div>
 
 			<v-spacer></v-spacer>
@@ -20,7 +20,9 @@
 		</v-app-bar>
 
 		<v-main>
-			<router-view class="tw-bg-gradient-to-tr tw-from-pink-300 tw-to-green-200 tw-via-yellow-200"></router-view>
+			<router-view
+				class="tw-bg-gradient-to-tr tw-from-pink-300 tw-to-green-200 tw-via-yellow-200"
+			></router-view>
 		</v-main>
 	</v-app>
 </template>
@@ -34,25 +36,40 @@ export default {
 	data: () => ({
 		//
 	}),
+
+	metaInfo: {
+		title: "Yogaraj.S - Personal Portfolio",
+		meta: [
+			{ charset: "utf-8" },
+			{ name: "description", content: "Personal portfoio of Yogaraj.S" },
+			{
+				property: "og.description",
+				content: "Personal portfoio of Yogaraj.S",
+			},
+			{ property: "og:title", content: "Yogaraj.S - Personal Portfolio" },
+			{ property: "og:site_name", content: "Yogaraj.S" },
+			{ property: "og:type", content: "website" },
+			{ name: "robots", content: "index,follow" },
+		],
+	},
 };
 </script>
 
 <style scoped lang="scss">
 @font-face {
-  font-family: "Varela";
-  src: local("Varela"),
-    url(./fonts/varela/Varela-Regular.ttf) format("truetype");
+	font-family: "Varela";
+	src: local("Varela"),
+		url(./fonts/varela/Varela-Regular.ttf) format("truetype");
 }
 @font-face {
-  font-family: "Nunito";
-  src: local("Nunito"),
-    url(./fonts/nunito/Nunito-Regular.ttf) format("truetype");
+	font-family: "Nunito";
+	src: local("Nunito"),
+		url(./fonts/nunito/Nunito-Regular.ttf) format("truetype");
 }
-
 
 #nav_links > a {
 	text-decoration: none;
-	@apply  tw-hidden md:tw-block;
+	@apply tw-hidden md:tw-block;
 }
 .router-link-active > button {
 	background: white !important;
@@ -60,7 +77,6 @@ export default {
 }
 
 #app {
-
 	background: linear-gradient(
 			180deg,
 			#cff0fb 19.27%,
