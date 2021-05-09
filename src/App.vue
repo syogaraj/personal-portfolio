@@ -44,14 +44,15 @@ export default {
 			{ name: "description", content: "Personal portfoio of Yogaraj.S" },
 			{
 				property: "og.description",
-				content: "Personal portfoio of Yogaraj.S",
+				content: "Personal portfolio of Yogaraj.S",
 			},
 			{ property: "og:title", content: "Yogaraj.S - Personal Portfolio" },
 			{ property: "og:site_name", content: "Yogaraj.S" },
 			{ property: "og:type", content: "website" },
+			{ property: "og:image", content: require("./assets/images/self/me.png")},
 			{ name: "robots", content: "index,follow" },
 		],
-	},
+	}
 };
 </script>
 
