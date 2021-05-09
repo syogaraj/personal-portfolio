@@ -6,10 +6,10 @@ import VueMeta from 'vue-meta';
 import "tailwindcss/tailwind.css";
 
 Vue.config.productionTip = false
+Vue.use(VueMeta);
 
 new Vue({
   router,
   vuetify,
-  VueMeta,
   render: h => h(App)
 }).$mount('#app')
